@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: configserver
+  config:
+    name: ${spring.application.name}
+  cloud:
+    config:
+      server:
+        prefix: config
+        bootstrap: true
+        git:
+          uri: https://github.com/HelLViS69/spring-cloud-config-conf-issues-1045.git
+          force-pull: true
+          clone-on-start: true
+          search-paths:
+            - ./public/
